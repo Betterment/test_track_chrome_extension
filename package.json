@@ -1,0 +1,32 @@
+{
+  "name": "test_track_chrome_extension",
+  "version": "1.0.9",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.6.3",
+    "fs": "0.0.1-security",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-crx": "^1.0.2",
+    "grunt-init": "^0.3.2",
+    "grunt-preprocess": "^5.1.0",
+    "node-uuid": "^1.4.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Betterment/test_track_chrome_extension"
+  },
+  "author": "Alan Norton <me@alannorton.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Betterment/test_track_chrome_extension/issues"
+  },
+  "homepage": "https://github.com/Betterment/test_track_chrome_extension"
+}

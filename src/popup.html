@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="popup.js"></script>
+        <style type="text/css">
+            body {
+                min-width: 400px;
+            }
+            #save {
+                font-size: 125%;
+            }
+            #visitor {
+                width: 50%;
+            }
+            .visitor:before {
+                content: 'Visitor: ';
+            }
+            .visitor {
+                font-weight: bold;
+            }
+            #filter {
+                float: right;
+            }
+            .wrapper {
+                height: 400px;
+                overflow-y: scroll;
+                padding: 20px;
+            }
+            ::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 7px;
+            }
+            ::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background-color: rgba(0,0,0,.5);
+                box-shadow: 0 0 1px rgba(255,255,255,.5);
+            }
+            .save-buttons {
+                margin: 20px 0 0 0;
+                text-align: center;
+            }
+            h1 {
+                margin: 0;
+            }
+            .logo-text {
+                padding: 20px 0 0 0;
+            }
+            .loading {
+                width: 66px;
+                height: 66px;
+                background: url(ajax-loader.gif);
+                position: fixed;
+                top: 40%;
+                left: 40%;
+            }
+            #form {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper pure-g">
+            <div class="pure-u-5-5">
+                <div class="pure-u-1-5">
+                    <img src="icon64.png" width="64" class="logo" />
+                </div>
+                <div class="logo-text pure-u-3-5">
+                    <h1>Test Track</h1>
+                </div>
+
+                <div class="loading"></div>
+
+                <section>
+                    <div id="visitor" class="pure-u-5-5"></div>
+                    <div id="filter"><input id="name-filter" type="text" autofocus="autofocus" placeholder="filter by split" /></div>
+                </section>
+
+                <form id="form" class="pure-form">
+                    <table id="splits" class="pure-table pure-table-horizontal pure-u-5-5">
+                        <thead>
+                            <tr>
+                                <th>Split</th>
+                                <th>Variant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                    <div class="save-buttons pure-u-5-5">
+                        <button type="button" id="save" class="pure-button button-large pure-button-primary">save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

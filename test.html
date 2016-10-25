@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+        <script src="bower_components/node-uuid/uuid.js"></script>
+        <script src="bower_components/blueimp-md5/js/md5.min.js"></script>
+        <script src="bower_components/test_track_js_client/test_track.js"></script>
+    </head>
+    <body>
+        <h1>Test Track test page</h1>
+
+<pre>
+&lt;div style="visibility:hidden;width:0;height:0;" class="_tt"&gt;
+  &lt;script&gt;
+    window.TT = {
+      url: 'http://testtrack.dev',
+      cookieDomain: '',
+      registry: {
+        best_looking: { john: 25, sam: 25, alan: 25, adam: 25 }
+      },
+      assignments: {
+        best_looking: 'sam'
+      }
+    };
+  &lt;/script&gt;
+&lt;/div&gt;
+</pre>
+
+        <div style="visibility:hidden;width:0;height:0;" class="_tt">
+            <script>
+                window.TT = {
+                    url: 'http://testtrack.dev',
+                    cookieDomain: '',
+                    registry: {
+                        best_looking: { john: 25, sam: 25, alan: 25, adam: 25 }
+                    },
+                    assignments: {
+                        best_looking: 'sam'
+                    }
+                };
+            </script>
+        </div>
+    </body>
+</html>

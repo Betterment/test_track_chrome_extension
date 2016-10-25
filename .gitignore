@@ -1,0 +1,7 @@
+/node_modules
+/bower_components
+.idea
+/dist/*
+/extension/sharedSecret.js
+/etc/*
+!.gitkeep
