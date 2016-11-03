@@ -4,4 +4,4 @@
 /dist/*
 /extension/sharedSecret.js
 /etc/*
-!.gitkeep
+!.keep
