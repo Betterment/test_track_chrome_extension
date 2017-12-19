@@ -27,8 +27,8 @@ source control.
    TestTrack server with an environment variable of that same name
    and value so that the Chrome extension can authenticate.
 1. Edit `etc/domains.json` to include any domains you'd like to enable
-   TestTrack on. It starts out enabled on \*.dev for compatibility with
-   [pow](http://pow.cx).
+   TestTrack on. It starts out enabled on \*.dev and \*.test for compatibility
+   with [pow](http://pow.cx).
 1. Run `grunt`. This will build an `unpackaged_extension` and a
    `.zip` file within `dist`. The `.zip` file is suitable for upload to
 the Chrome Store Developer Dashboard for distribution to your Google
