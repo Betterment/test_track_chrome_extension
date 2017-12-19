@@ -91,10 +91,11 @@ module.exports = function(grunt) {
     grunt.registerTask('ensuredomains', function() {
         if (!grunt.file.exists('etc/domains.json')) {
             grunt.file.write('etc/domains.json', '{\n' +
-                             '    "_description": "Domains on which to enable TestTrack chrome extension. Defaults to *.dev",\n' +
+                             '    "_description": "Domains on which to enable TestTrack chrome extension. Defaults to *.dev and *.test",\n' +
                              '    "_instructions": "To enable *.example.org, add example.org to the `domains` array",\n' +
                              '    "domains": [\n' +
-                             '        "dev"\n' +
+                             '        "dev",\n' +
+                             '        "test"\n' +
                              '    ]\n' +
                              '}\n');
         }
