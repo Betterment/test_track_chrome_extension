@@ -14,8 +14,7 @@
             return split && TestTrack._crx.persistAssignment(split.name, split.variant, 'crx', sharedSecret);
         });
 
-        // TODO: find a way to remove usage of jQuery
-        $.when.apply($, promises).done(function() {
+        Promise.allSettled(promises).then(function() {
             location.reload();
         });
     }
