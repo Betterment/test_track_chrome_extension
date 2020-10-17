@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('hackmanifest', function() {
         // preprocessor doesn't work on .json files
-        fs.rename('dist/unpacked_extension/manifest.js', 'dist/unpacked_extension/manifest.json');
+        fs.renameSync('dist/unpacked_extension/manifest.js', 'dist/unpacked_extension/manifest.json');
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
