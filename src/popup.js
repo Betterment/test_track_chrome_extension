@@ -52,7 +52,7 @@ function optionList(split_name, variant_names, selected_variant) {
 
     options.unshift(option('', !selected_variant));
 
-    return label($('<select>').attr('name', split_name).data('selectedVariant', selected_variant).html(options));
+    return label($('<select>').attr('name', split_name).data('originalVariant', selected_variant).html(options));
 }
 
 function option(variant_name, selected) {
@@ -81,7 +81,7 @@ $(function() {
 
         var splitsToSave = $('#splits select').map(function() {
             var value = $(this).val();
-            if (value && value != $(this).data('selectedVariant')) {
+            if (value && value != $(this).data('originalVariant')) {
                 return {
                     name: $(this).attr('name'),
                     variant: value
