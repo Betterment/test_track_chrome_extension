@@ -18,42 +18,42 @@ team to test out different configurations on their machines.
 
 ## Building the extension
 
-1. Run `npm install` to get the necessary dependencies to build the
+1. Run `yarn install` to get the necessary dependencies to build the
    chrome extension.
 1. Run `grunt ensureconfig`. This task will generate three files in
-   `test_track_chrome_extension/etc` that you *should not* commit to
-source control.
+   `test_track_chrome_extension/etc` that you _should not_ commit to
+   source control.
 1. Copy down the `BROWSER_EXTENSION_SHARED_SECRET` and configure your
    TestTrack server with an environment variable of that same name
    and value so that the Chrome extension can authenticate.
 1. Edit `etc/domains.json` to include any domains you'd like to enable
-   TestTrack on. It starts out enabled on \*.dev and \*.test for compatibility
-   with [pow](http://pow.cx).
+   TestTrack on. It starts out enabled on \*.test for compatibility
+   with [puma-dev](https://github.com/puma/puma-dev).
 1. Run `grunt`. This will build an `unpackaged_extension` and a
    `.zip` file within `dist`. The `.zip` file is suitable for upload to
-the Chrome Store Developer Dashboard for distribution to your Google
-Apps organization. *Note: it is not advised that you release your
-Chrome Extension publicly because it contains the secret specific to
-your organization. The secret could be used to override any split
-assignment on your TestTrack server.*
+   the Chrome Store Developer Dashboard for distribution to your Google
+   Apps organization. _Note: it is not advised that you release your
+   Chrome Extension publicly because it contains the secret specific to
+   your organization. The secret could be used to override any split
+   assignment on your TestTrack server._
 
 ## Running locally
 
 1. Uninstall the production extension if you have it
-    1. Open chrome://extensions/
-    1. Delete the `Test Track` plugin
-    1. Install the test extension
+   1. Open chrome://extensions/
+   1. Delete the `Test Track` plugin
+   1. Install the test extension
 1. Open chrome://extensions/
-    1. Click `Developer mode`
-    1. Click the `Load unpacked extension...`
-    1. Select the
-       `src/test_track_chrome_extension/dist/unpacked_extension` folder
+   1. Click `Developer mode`
+   1. Click the `Load unpacked extension...`
+   1. Select the
+      `src/test_track_chrome_extension/dist/unpacked_extension` folder
 1. To debug
-    1. Open the extension
-    1. Right click and inspect
-    1. Navigate to the `sources` tab and set your breakpoint(s)
-    1. Navigate to the `console` tab and run `location.reload(true)`
-        1. This will re-initialize the extension and hit your breakpoint
+   1. Open the extension
+   1. Right click and inspect
+   1. Navigate to the `sources` tab and set your breakpoint(s)
+   1. Navigate to the `console` tab and run `location.reload(true)`
+      1. This will re-initialize the extension and hit your breakpoint
 
 ## Uploading to the chrome store
 
@@ -69,20 +69,19 @@ automatically upgrade whenever a newer version becomes available, which
 is great for your team if you add a new domain in the future or need to
 cycle your shared secret.
 
-
 ## Useful grunt tasks
 
-* `grunt` - builds fresh files in `dist` from your current `src` and
+- `grunt` - builds fresh files in `dist` from your current `src` and
   `etc` settings.
-* `grunt cyclesecret` - generates a brand new shared secret and bumps
+- `grunt cyclesecret` - generates a brand new shared secret and bumps
   the version number. This is useful if you're concerned that a third
-party has gained access to your shared secret. Just update your
-TestTrack server with the new value and deploy the new version to the
-chrome store, and you're good to go.
-* `grunt bumpversion` - bumps the version number and builds a fresh
+  party has gained access to your shared secret. Just update your
+  TestTrack server with the new value and deploy the new version to the
+  chrome store, and you're good to go.
+- `grunt bumpversion` - bumps the version number and builds a fresh
   distribution. This is useful if you've modified your `domains.json`
-file to add a new domain and need to deploy the change to clients in the
-field.
+  file to add a new domain and need to deploy the change to clients in the
+  field.
 
 ## How to Contribute
 
@@ -92,7 +91,7 @@ Before diving in, [check our issue tracker](//github.com/Betterment/test_track_c
 
 ### Suggested Workflow
 
-* Fork the project and create a new branch.
-* Write your contribution.
-* Test it out and make sure it works locally (see above).
-* Submit a pull request.
+- Fork the project and create a new branch.
+- Write your contribution.
+- Test it out and make sure it works locally (see above).
+- Submit a pull request.
