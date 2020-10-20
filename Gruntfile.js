@@ -91,10 +91,9 @@ module.exports = function(grunt) {
     grunt.registerTask('ensuredomains', function() {
         if (!grunt.file.exists('etc/domains.json')) {
             grunt.file.write('etc/domains.json', '{\n' +
-                             '    "_description": "Domains on which to enable TestTrack chrome extension. Defaults to *.dev and *.test",\n' +
+                             '    "_description": "Domains on which to enable TestTrack chrome extension. Defaults to *.test",\n' +
                              '    "_instructions": "To enable *.example.org, add example.org to the `domains` array",\n' +
                              '    "domains": [\n' +
-                             '        "dev",\n' +
                              '        "test"\n' +
                              '    ]\n' +
                              '}\n');
@@ -108,7 +107,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('hackmanifest', function() {
         // preprocessor doesn't work on .json files
-        fs.rename('dist/unpacked_extension/manifest.js', 'dist/unpacked_extension/manifest.json');
+        fs.renameSync('dist/unpacked_extension/manifest.js', 'dist/unpacked_extension/manifest.json');
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
